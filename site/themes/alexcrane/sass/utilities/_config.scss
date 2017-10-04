@@ -1,0 +1,162 @@
+//------------------------------------
+//    #Global Config
+//------------------------------------
+
+
+// Font import
+//---------------------------------------------
+@font-face {
+    font-family: '../../../../assets/fonts/CenturyGothic';
+    SRC: url('../../../../assets/fonts/CenturyGothic.ttf')  format('truetype');
+}
+
+
+// Font stacks
+//---------------------------------------------
+
+//$font-family            : 'Yantramanav', sans-serif;
+//$font-family--h-script    : 'Waiting for the Sunrise', cursive;
+//$font-family--p-script    : 'Open Sans', sans-serif;
+$font-family--h-script    : 'CenturyGothic', sans-serif;
+$font-family--p-script    : 'CenturyGothic', sans-serif;
+
+
+// Font weights - Yantramanav
+//---------------------------------------------
+
+//$font-weight--light     : 100;
+//$font-weight--book      : 300;
+//$font-weight--bold      : 500;
+
+
+// Font sizes - Yantramanav
+//---------------------------------------------
+//$font-size-h1           : 64px;
+//$font-size-h2           : 48px;
+//$font-size-h3           : 32px;
+//$font-size-h4           : 24px;
+//$font-size-h5           : 14px;
+//$font-size-h6           : 12px;
+//$font-size-p            : 16px;
+
+
+// Font weights
+//---------------------------------------------
+
+$font-weight--light     : 300;
+$font-weight--book      : 400;
+$font-weight--bold      : 600;
+
+
+// Font sizes
+//---------------------------------------------
+$font-size-h1           : 80px;
+$font-size-h2           : 58px;
+$font-size-h3           : 40px;
+$font-size-h4           : 28px;
+$font-size-h5           : 18px;
+$font-size-h6           : 14px;
+$font-size-p            : 16px;
+
+
+// Descriptive base colors
+//---------------------------------------------
+
+$white                  : #FFFFFF;
+$black                  : #000000;
+
+// Grays
+$porcelain              : #F2F4F5;
+$iron                   : #D7D9DC;
+$river-bed              : #444E58;
+$mirage                 : #15222E;
+$woodsmoke              : #101213;
+
+$casper                 : #ABBACD;
+
+// Reds
+$alizarin-crimson       : #D81F26;
+$roof-terracotta        : #B11F24;
+$falu-red               : #8B181A;
+$paco                   : #471111;
+
+
+// Color usage
+//---------------------------------------------
+
+$light-gray               : $porcelain;
+$med-gray                 : $iron;
+$dark-gray                : $river-bed;
+$darkest-gray             : $woodsmoke;
+
+$light-blue-gray          : $casper;
+
+$light-red                : $alizarin-crimson;
+$med-red                  : $roof-terracotta;
+$dark-red                 : $falu-red;
+$darkest-red              : $paco;
+
+$transparent-dark-gray    : rgba(17, 18, 20, 0.7);
+$transparent-light-gray      : rgba(242, 244, 245, 0.9);
+$transparent-dark-gray30  : rgba(17, 18, 20, 0.3);
+$transparent-light-gray30 : rgba(242, 244, 245, 0.3);
+
+
+
+// UI Colors
+//---------------------------------------------
+
+$btn-colors: (
+    default       : $black,
+    secondary     : $white
+);
+
+
+// Text
+//---------------------------------------------
+
+$base__font-size               : 16px;
+$base__line                    : 22px;
+
+
+// Path to assets
+//--------------------------------------------- 
+
+$img-path--rel                      : "../../../../assets/img/";
+
+
+
+
+// Radius
+//---------------------------------------------
+
+$br--default           : 4px;
+$br--three             : 3px;
+$br--two               : 2px;
+$br--top               : 4px 4px 0 0;
+$br--left              : 4px 0 0 4px;
+$br--right             : 0 4px 4px 0;
+$br--bottomleft        : 0 0 0 4px;
+$br--bottomright       : 0 0 4px 0;
+
+
+// Shadow
+//---------------------------------------------
+
+$sh--default           : 3px 3px 2px 0px rgba(0, 0, 0, 0.5);
+
+
+
+// Gradient
+//---------------------------------------------
+
+
+
+// Gap
+//---------------------------------------------
+$gap: 32px;
+
+
+// Media Queries
+//---------------------------------------------
+$breakpoint-tablet: 768px;

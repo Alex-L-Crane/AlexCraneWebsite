@@ -1,0 +1,115 @@
+<nav class="m-navbar"
+     v-on:mouseover="headNavHover">
+
+    <div class="m-main-nav-full {{ if template == 'home' }}m-main-nav-full--home{{ /if }}"
+         v-bind:class="{'m-main-nav-full--hidden': hideHeadNav && !footerVisible || folioHover,
+                        'm-main-nav-full--bg': headerBG}">
+        {{ if collection == 'work' }}
+        <a href="/visuals">Back to visuals</a>
+        {{ /if }}
+        <ul class="m-main-nav-full__ul">
+            {{ nav from="/" include_home="true" }}
+            <li class="m-main-nav-full__link {{ if is_current or is_parent }} m-main-nav-full__link--active {{ /if }}">
+                <a href="{{ url }}">{{ title }}</a>
+            </li>
+            {{ /nav }}
+        </ul>
+    </div>
+
+
+    <div class="m-main-nav-mobile"
+         v-if="!subNavOpen"
+         v-bind:class="{'m-main-nav-mobile--hidden': hideHeadNav && !footerVisible,
+                        'm-main-nav-mobile--open': mobileNavOpen}">
+
+        <div class="m-main-nav-mobile__bar"
+             v-on:click="toggleMobileNav">
+            Menu
+        </div>
+
+        <ul class="m-main-nav-mobile__ul">
+            <li class="m-main-nav-mobile__link"><a v-on:click="toggleMobileNav">Close</a></li>
+            {{ nav from="/" include_home="true" }}
+            <li class="m-main-nav-mobile__link {{ if is_current or is_parent }} m-main-nav-mobile--active {{ /if }}"><a href="{{ url }}">{{ title }}</a></li>
+            {{ /nav }}
+        </ul>
+    </div>
+</nav>
+
+
+{{ if template == 'feed-fullscreen'}}
+<nav class="m-subnav"
+     v-bind:class="{'m-subnav--hidden': hideSubNav && !footerVisible,
+                    'm-subnav--footer': footerVisible}"
+     v-on:mouseover="subNavHover">
+
+    <div class="m-subnav__bar"
+        v-bind:class="{'m-subnav__bar--open': subNavOpen}">
+        <ul class="m-subnav__ul">
+            <li class="m-subnav__link">
+                <a v-on:click="toggleSubNav">+ CATEGORIES</a>
+            </li>
+            <li class="m-subnav__link">
+                <a href="#">Featured</a>
+            </li>
+            <li class="m-subnav__link">
+                <a href="#">User Interface</a>
+            </li>
+            <li class="m-subnav__link">
+                <a href="#">Music Visuals</a>
+            </li>
+            <li class="m-subnav__link">
+                <a href="#">Print</a>
+            </li>
+        </ul>
+    </div>
+    <!--<div class="m-subnav-full"
+         v-bind:class="{'m-subnav-full--hidden': hideSubNav && !footerVisible,
+                        'm-subnav-full--scrolled': scrolledPast100}">
+        {{ if template == 'feed-fullscreen' }}
+        <ul class="m-subnav-full__ul">
+            <li class="m-subnav-full__link">
+                <a href="#">Featured</a>
+            </li>
+            <li class="m-subnav-full__link">
+                <a href="#">User Interface</a>
+            </li>
+            <li class="m-subnav-full__link">
+                <a href="#">Music Visuals</a>
+            </li>
+            <li class="m-subnav-full__link">
+                <a href="#">Print</a>
+            </li>
+        </ul>
+        {{ /if }}
+
+        {{ if collection == 'work' }}
+        <a class="back-link" href="/visuals">Back to visuals</a>
+        {{ /if }}
+    </div>
+
+
+    <div class="m-subnav-mobile"
+         v-bind:class="{'m-subnav-mobile--scrolled': scrolledPast100, 'm-subnav-mobile--footer-scroll': footerVisible}">
+        {{ if template == 'feed-fullscreen' }}
+        <span class="m-subnav-mobile__inner m-subnav-mobile--closed" v-if="!mobileCategories" v-on:click="toggleMobileCategories">Categories</span>
+        {{ /if }}
+        {{ if collection == 'work' }}
+        <a class="back-link" href="/visuals">Back to visuals</a>
+        {{ /if }}
+
+        {{ if template == 'feed-fullscreen' }}
+        <div class="m-subnav-mobile--open" v-if="mobileCategories">
+            <ul class="m-subnav-mobile__inner">
+                <li class="m-subnav-mobile__link"><a v-on:click="toggleMobileCategories">Close</a></li>
+                <li class="m-subnav-mobile__link"><a href="#">Link</a></li>
+            </ul>
+        </div>
+        {{ /if }}
+    </div>-->
+</nav>
+
+{{ /if }}
+
+
+

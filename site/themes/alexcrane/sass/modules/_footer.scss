@@ -1,0 +1,80 @@
+//------------------------------------
+//    #Footer
+//------------------------------------
+
+.svg-triangle path {
+  width: 30px;
+  height: 30px;
+}
+
+.m-next-suggestions {
+  @include size1of1();
+  margin: 0;
+  padding: 0;
+  @include e(single) {
+    width: 50%;
+    height: auto;
+    float: right;
+    text-align: center;
+    & a {
+      text-decoration: none;
+      color: $darkest-gray;
+      font-size: 28px;
+      font-weight: $font-weight--book;
+      line-height: 100px;
+      vertical-align: middle;
+      background-color: $med-gray;
+      display: block;
+      border-top: 2px solid $light-gray;
+      &:hover {
+        color: $med-gray;
+        background-color: $dark-gray;
+      }
+      &.right-arrow {
+        border-left: 2px solid $light-gray;
+        background-image: url('#{$img-path--rel}right-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: 90% 50%;
+        &:hover {
+          background-image: url('#{$img-path--rel}right-arrow-light.svg');
+        }
+      }
+      &.left-arrow {
+        background-image: url('#{$img-path--rel}left-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: 10% 50%;
+        &:hover {
+          background-image: url('#{$img-path--rel}left-arrow-light.svg');
+        }
+      }
+    }
+  }
+}
+
+footer {
+  height: 180px;
+  background-color: $darkest-gray;
+  padding: 0 10%;
+  & span {
+    color: rgba(242, 244, 245, 0.3);
+    font-size: 16px;
+    font-weight: $font-weight--light;
+    line-height: 180px;
+    vertical-align: middle;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .m-next-suggestions {
+    @include e(single) {
+      @include size1of1();
+      & a{
+        &.right-arrow {
+          border-left: none;
+        }
+      }
+    }
+  }
+}

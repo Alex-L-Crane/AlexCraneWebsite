@@ -1,0 +1,13 @@
+title: Main Assets
+path: assets
+url: /assets
+assets:
+  img/desk-2000x1333-bw.jpg:
+    title: Desk Image
+    alt: Photo of my desk
+  img/desk-1333x1333-bw.jpg:
+    title: Desk Image
+    alt: Photo of my desk
+  img/clayreed/clay-reed-2000x1333.jpg:
+    title: Desk Image
+    alt: Photo of my desk

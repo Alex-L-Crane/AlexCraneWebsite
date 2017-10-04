@@ -1,0 +1,9 @@
+<div class="m-entry-banner">
+    {{ if intro_video }}
+        <video src="{{ intro_video }}" class="m-entry-banner__bg" autoplay loop></video>
+    {{ /if }}
+
+    {{ if intro_image }}
+        <img src="{{ intro_image }}" class="m-entry-banner__bg" />
+    {{ /if }}
+</div>

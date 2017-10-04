@@ -1,0 +1,149 @@
+//------------------------------------
+//    #Preview Panels
+//------------------------------------
+
+.m-preview-fullwidth {
+  height: 800px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  text-align: left;
+  @include e(image-wrap) {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: transparent;
+      display: block;
+  }
+  @include e(plus) {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+      bottom: 0;
+      left: 0;
+  }
+  a.m-preview-link {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    z-index: 1100;
+    display: block;
+    background-image: url('#{$img-path--rel}plus-symbol.svg');
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    background-position: bottom left;
+    -moz-transition: background-size 0.5s ease-in-out;
+    transition: background-size 0.5s ease-in-out;
+    & + div.fullwidth-description {
+      width: 0;
+      position: absolute;
+      top: 0;
+      //right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      -moz-transition: width 0.5s ease-in-out;
+      transition: width 0.5s ease-in-out;
+    }
+    &:hover {
+      height: 100%;
+      background-size: 0px 0px;
+      & + div.fullwidth-description {
+        width: 50%;
+
+      }
+    }
+  }
+  & .fullwidth-description--inner {
+    width: 768px;
+    padding: 300px 0 0 10%;
+    margin: 0;
+  }
+  @include m(light){
+    & h2 {
+        margin-bottom: 0;
+        color: $transparent-dark-gray;
+    }
+    & h4 {
+      width: auto;
+      margin: 0 0 80px 0;
+      color: $transparent-dark-gray;
+      & span {
+        border-top: 1px solid $transparent-dark-gray30;
+        padding-top: 16px;
+      }
+    }
+    a.m-preview-link {
+      & + div.fullwidth-description {
+        background-color: $transparent-light-gray;
+      }
+    }
+  }
+  @include m(dark){
+    & h2 {
+      margin-bottom: 0;
+      color: $transparent-light-gray;
+    }
+    & h4 {
+      width: auto;
+      margin: 0 0 80px 0;
+      color: $transparent-light-gray;
+      & span {
+        border-top: 1px solid $transparent-light-gray30;
+        padding-top: 16px;
+      }
+    }
+    a.m-preview-link {
+      & + div.fullwidth-description {
+        background-color: $transparent-dark-gray;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .m-preview-fullwidth {
+    height: auto;
+    @include e(image-wrap) {
+      position: relative;
+      width: 150%;
+      height: auto;
+      margin: 0 -25%;
+      background-size: contain;
+      background-position: top;
+    }
+    a.m-preview-link {
+      width: 80px;
+      height: 80px;
+      & + div.fullwidth-description {
+        display: none;
+      }
+    }
+    & h2 {
+        font-size: 36px;
+        color: $darkest-gray;
+    }
+    & h4 {
+        font-size: $font-size-h5;
+        color: $darkest-gray;
+        margin: 0 0 20px 0;
+        & span {
+            font-size: $font-size-h6;
+            color: $darkest-gray;
+            border-top: 1px solid $transparent-dark-gray30;
+        }
+    }
+  }
+}

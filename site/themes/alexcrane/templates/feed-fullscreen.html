@@ -1,0 +1,12 @@
+{{ if hero_image || hero_video}}
+    {{ partial:hero }}
+{{ /if }}
+
+<section class="l-content">
+
+    {{ collection:work paginate="true" as="entries" }}
+        {{ entries }}
+            {{ partial:preview-fullwidth }}
+        {{ /entries }}
+    {{ /collection:work }}
+</section>

@@ -1,0 +1,220 @@
+//------------------------------------
+//    #Mixins
+//------------------------------------
+
+
+
+// Colors
+//---------------------------------------------
+
+@mixin bg-colors($map) {
+	@each $theme, $color in $map {
+		&--#{$theme} {
+			background-color: $color;
+		}
+	}
+}
+
+@mixin img-replace($img, $w, $h, $disp: block) {
+    background-image: url('#{$path--rel}/#{$img}');
+    background-repeat: no-reapeat;
+    width: $w;
+    height: $h;
+    display: $disp;
+}
+
+
+
+// Pseudo elements
+//---------------------------------------------
+
+@mixin p-el (
+	$el,
+	$el-w: null,
+	$el-h: null) {
+    
+    @if $el == "before" or $el== "after" {
+		&:#{$el} {
+			@extend %pseudos;
+			width: $el-w;
+			height: $el-h;
+			@content
+		}
+    }
+    @else {
+        @error "'#{$sel}' is not a valid pseudo-element.";
+    }
+}
+
+
+
+
+// BEM selectors
+//---------------------------------------------
+
+@mixin e($element) {
+    &__#{$element} {
+    @content;    
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+    @content;    
+    }
+}
+
+
+
+// OOCSS Grid
+//---------------------------------------------
+@mixin unit ($margin: 0, $padding: 0, $right: 0) {
+    @if $right == 0 {
+        float: left;
+    } @else {
+        float: right;
+    }
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin last-unit {
+    margin-right: -2px;
+    // oocss source, a bit more roburst:
+    // display: table-cell;
+    // float: none;
+    // width: auto;
+    // *display: block;
+    // *zoom:1;
+    // _position:relative;
+    // _left:-3px;
+    // _margin-right:-3px;
+}
+
+@mixin size1of1 {
+    float: none;
+    width: 100%;
+}
+@mixin size1of2 {
+    width: 50%;
+}
+@mixin size1of3 {
+    width: 33.3333%;
+}
+@mixin size2of3 {
+    width: 66.6666%;
+}
+@mixin size1of4 {
+    width: 25%;
+}
+@mixin size3of4 {
+    width: 75%;
+}
+@mixin size1of5 {
+    width: 20%;
+}
+@mixin size2of5 {
+    width: 40%;
+}
+@mixin size3of5 {
+    width: 60%;
+}
+@mixin size4of5 {
+    width: 80%;
+}
+@mixin size1of8 {
+    width: 12.5%;
+}
+@mixin size3of8 {
+    width: 37.5%;
+}
+@mixin size5of8 {
+    width: 62.5%;
+}
+@mixin size7of8 {
+    width: 87.5%;
+}
+@mixin size1of10 {
+    width: 10%;
+}
+@mixin size3of10 {
+    width: 30%;
+}
+@mixin size7of10 {
+    width: 70%;
+}
+@mixin size9of10 {
+    width: 90%;
+}
+@mixin height8 {
+    height: 8px;
+}
+@mixin height16 {
+    height: 16px;
+}
+@mixin height24 {
+    height: 24px;
+}
+@mixin height32 {
+    height: 32px;
+}
+@mixin height40 {
+    height: 40px;
+}
+@mixin height48 {
+    height: 48px;
+}
+@mixin height56 {
+    height: 56px;
+}
+@mixin height64 {
+    height: 64px;
+}
+@mixin height72 {
+    height: 72px;
+}
+@mixin height80 {
+    height: 80px;
+}
+@mixin height88 {
+    height: 88px;
+}
+@mixin height96 {
+    height: 96px;
+}
+@mixin height104 {
+    height: 104px;
+}
+@mixin height112 {
+    height: 112px;
+}
+@mixin height120 {
+    height: 120px;
+}
+@mixin height128 {
+    height: 128px;
+}
+@mixin height136 {
+    height: 136px;
+}
+@mixin height144 {
+    height: 144px;
+}
+@mixin height152 {
+    height: 152px;
+}
+@mixin height160 {
+    height: 160px;
+}
+@mixin height168 {
+    height: 168px;
+}
+@mixin height176 {
+    height: 176px;
+}
+@mixin height184 {
+    height: 184px;
+}
+@mixin height192 {
+    height: 192px;
+}

@@ -1,0 +1,30 @@
+<section class="m-preview-fullwidth
+    {{ if theme == 'light' }}m-preview-fullwidth--light{{ /if }}
+    {{ if theme == 'dark' }}m-preview-fullwidth--dark{{ /if }}">
+
+    <img src="{{ intro_image }}" class="m-preview-fullwidth__image-wrap" />
+
+    <a class="m-preview-link" href="{{ url }}"
+       v-if="!subNavOpen"
+       v-on:mouseover="folioLinkHover"
+       v-on:mouseout="folioLinkHover"></a>
+
+    <div class="fullwidth-description">
+        <div class="fullwidth-description--inner">
+            <h2>{{ title }}</h2>
+            <h4>{{ subtitle }}</h4>
+            <h4>
+                <span>{{ skills }}</span>
+            </h4>
+        </div>
+    </div>
+
+    <!--<div class="mobile-description">
+        <h2>{{ title }}</h2>
+        <h4>{{ subtitle }}</h4>
+        <h4>
+            <span>{{ skills }}</span>
+        </h4>
+    </div>-->
+</section>
+

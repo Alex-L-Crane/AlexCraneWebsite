@@ -1,0 +1,49 @@
+//------------------------------------
+//    #Hero Image
+//------------------------------------
+
+.m-hero-bg {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: transparent;
+  @include m(vid) {
+    z-index: 460;
+  }
+  @include m(img) {
+    z-index: 450;
+  }
+}
+
+.m-logo-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 500;
+}
+
+.m-logo-container {
+  width: 800px;
+  height: auto;
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  margin: -108px 0 0 -400px;
+  z-index: 500;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .m-logo-container {
+    @include size4of5();
+    left: 10%;
+    margin: -95px 0 0 0;
+  }
+}

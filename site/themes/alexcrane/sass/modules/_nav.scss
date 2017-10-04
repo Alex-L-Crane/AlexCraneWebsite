@@ -1,0 +1,384 @@
+//------------------------------------
+//    #Nav
+//------------------------------------
+
+
+// Main Navigation
+//---------------------------------------------
+
+.m-navbar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.m-main-nav-full {
+  width: 100%;
+  position: absolute;
+    top: 0;
+  -moz-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+  @extend %clearfix;
+  @include e(ul){
+    @extend %horizontal-ul;
+    float: right;
+    text-align: center;
+  }
+  @include e(link) {
+    @extend %horizontal-li;
+    width: 144px;
+    height: 80px;
+    & a {
+      font-size: 22px;
+      font-weight: $font-weight--book;
+      line-height: 80px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      color: $med-gray;
+    }
+    @include m(active) {
+      & a {
+        border-top: 2px solid $med-gray;
+        padding-top: 24px;
+      }
+    }
+  }
+  @include m(home){
+    & .m-main-nav-full__link {
+      & a {
+        color: $light-blue-gray;
+      }
+      @include m(active) {
+        & a {
+          border-top: 2px solid $light-blue-gray;
+        }
+      }
+    }
+  }
+  @include m(hidden) {
+    top: -100px;
+  }
+  @include m(bg) {
+    background-color: $transparent-dark-gray;
+    & .m-main-nav-full__link {
+      & a {
+        color: $med-gray;
+      }
+      @include m(active) {
+        & a {
+          border-top: 2px solid $med-gray;
+        }
+      }
+    }
+  }
+}
+
+// Main Navigation Mobile
+//---------------------------------------------
+
+.m-main-nav-mobile {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  -moz-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+  @extend %clearfix;
+  @include e(bar) {
+    width: 100%;
+    height: 80px;
+    color: $med-gray;
+    background-color: $transparent-dark-gray;
+    text-align: center;
+    font-size: 22px;
+    line-height: 80px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  @include e(ul){
+    width: auto;
+    @extend %horizontal-ul;
+    display: none;
+    padding: 10%;
+  }
+  @include e(link) {
+    width: 100%;
+    text-align: center;
+    & a {
+      font-size: 26px;
+      font-weight: $font-weight--book;
+      line-height: 60px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      color: $med-gray;
+    }
+    @include m(active) {
+      & a {
+        font-weight: $font-weight--bold;
+      }
+    }
+  }
+  @include m(hidden) {
+    top: -100px;
+  }
+  @include m(open){
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: $transparent-dark-gray;
+    z-index: 2000;
+    & .m-main-nav-mobile__ul {
+      display: block;
+    }
+    & .m-main-nav-mobile__bar {
+      display: none;
+    }
+  }
+}
+
+
+
+// Sub Navigation
+//---------------------------------------------
+
+.m-subnav {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 1000;
+  margin: 0;
+  padding: 0 ;
+  -moz-transition: bottom 0.5s ease-in-out;
+  transition: bottom 0.5s ease-in-out;
+  @include m(footer) {
+    position: absolute;
+    -moz-transition: bottom 0.05s ease-in-out;
+    transition: bottom 0.05s ease-in-out;
+  }
+  @include e(bar) {
+    width: 180px;
+    height: 50px;
+    position: absolute;
+      bottom: 0;
+      right: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $transparent-dark-gray;
+    -moz-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+    @include m(open) {
+      width: 100%;
+    }
+  }
+  @include m(hidden) {
+    bottom: -60px;
+  }
+  @include e(ul){
+    @extend %horizontal-ul;
+    width: 1400px;
+    display: block;
+    float: right;
+    text-align: center;
+  }
+  @include e(link) {
+    width: 180px;
+    height: 50px;
+    float: right;
+    & a {
+      font-size: 18px;
+      font-weight: $font-weight--book;
+      line-height: 50px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      color: $med-gray;
+    }
+  }
+}
+/*.m-subnav-full {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  -moz-transition: bottom 0.5s ease-in-out;
+  transition: bottom 0.5s ease-in-out;
+  background-color: $transparent-dark-gray;
+  @extend %clearfix;
+  & a.back-link {
+    width: 180px;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    color: $med-gray;
+    text-decoration: none;
+    border-radius: $br--default;
+    background-image: url('#{$img-path--rel}left-arrow-light.svg');
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+    background-position: 10% 50%;
+  }
+  @include e(ul){
+    @extend %horizontal-ul;
+    float: right;
+    text-align: center;
+  }
+  @include e(link) {
+    @extend %horizontal-li;
+    width: 180px;
+    height: 50px;
+    & a {
+      font-size: 18px;
+      font-weight: $font-weight--book;
+      line-height: 50px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      color: $med-gray;
+      &:hover {
+        font-weight: $font-weight--bold;
+      }
+    }
+    @include m(active) {
+      & a {
+        font-weight: $font-weight--bold;
+      }
+    }
+  }
+  @include m(hidden) {
+    bottom: -100px;
+  }
+}
+
+.m-subnav {
+  @include m(footer) {
+    .m-subnav-full {
+      -moz-transition: bottom 0.05s ease-in-out;
+      transition: bottom 0.05s ease-in-out;
+    }
+  }
+}
+
+.m-subnav-mobile {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 1000;
+  @extend %clearfix;
+  @include e(inner){
+    @extend %horizontal-ul;
+    text-align: center;
+    display: none;
+  }
+  @include e(link) {
+    width: 100%;
+    text-align: center;
+    & a {
+      font-size: 26px;
+      font-weight: $font-weight--book;
+      line-height: 60px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      color: $med-gray;
+    }
+    @include m(active) {
+      & a {
+        font-weight: $font-weight--bold;
+      }
+    }
+  }
+  @include m(closed) {
+    width: 144px;
+    height: 50px;
+    float: right;
+    text-align: center;
+    font-size: 18px;
+    font-weight: $transparent-dark-gray;
+    line-height: 50px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    color: $light-blue-gray;
+  }
+  @include m(open){
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 10%;
+    background-color: $transparent-dark-gray;
+    z-index: 2000;
+  }
+  & a.back-link {
+    width: 180px;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    color: $light-blue-gray;
+    text-decoration: none;
+  }
+  @include m(scrolled) {
+    background-color: $transparent-dark-gray;
+    & .m-subnav-mobile__inner {
+      display: block;
+    }
+    & .m-subnav-mobile__link {
+      display: block;
+      & a {
+        color: $med-gray;
+      }
+    }
+    & a.back-link {
+      color: $med-gray;
+    }
+  }
+  @include m(footer-scroll) {
+    &.m-subnav-mobile {
+      position: absolute;
+    }
+  }
+}*/
+
+
+@media (min-width: $breakpoint-tablet) {
+  .m-main-nav-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .m-main-nav-full {
+    display: none;
+  }
+  .m-main-nav-mobile {
+    display: block;
+  }
+}

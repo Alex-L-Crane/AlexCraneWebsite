@@ -1,0 +1,6 @@
+app_key: XcuUbp4p1qzMWEAboqLxn0wyBu8E3rk9
+locales:
+  en:
+    full: en_US
+    name: English
+    url: http://localhost:8888/

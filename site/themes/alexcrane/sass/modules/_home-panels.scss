@@ -1,0 +1,58 @@
+//------------------------------------
+//    #Home Panels
+//------------------------------------
+
+.m-home-panel {
+  width: 90%;
+  height: auto;
+  position: relative;
+  padding: 0;
+  margin: 10% auto;
+  @include e(img) {
+    width: 65%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+
+  }
+  @include e(badge){
+    width: 30%;
+    padding: 5%;
+    position: relative;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
+    @include m(left) {
+      float: right;
+      margin: 10% 0 0 -5%;
+    }
+    @include m(right) {
+      float: left;
+      margin: 10% -5% 0 0;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .m-home-panel {
+    @include e(img) {
+      width: 100%;
+      @include m(left) {
+        float: none;
+      }
+      @include m(right) {
+        float: none;
+      }
+    }
+    @include e(badge){
+      width: 75%;
+      @include m(left) {
+        float: none;
+        margin: -5% auto 0 auto;
+      }
+      @include m(right) {
+        float: none;
+        margin: -5% auto 0 auto;
+      }
+    }
+  }
+}

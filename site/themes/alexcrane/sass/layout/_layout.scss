@@ -1,0 +1,26 @@
+//------------------------------------
+//    #Layout
+//------------------------------------
+
+.l-page-wrap {
+	position: relative;
+}
+
+.l-hero-wrap {
+	position:relative;
+	@include size1of1();
+	height:100vh;
+	overflow: hidden;
+}
+
+.l-content{
+	position: relative;
+	@include size1of1();
+	height: auto;
+}
+
+.l-footer{
+	position: relative;
+	@include size1of1();
+	height: auto;
+}
