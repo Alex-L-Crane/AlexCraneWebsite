@@ -18,7 +18,7 @@ elixir(function(mix) {
         theme + '.scss',
         'css/' + theme + '.css');
 
-    mix.scripts([
+    mix.browserify([
         'vendor/noframework.waypoints.min.js',
         'jabbascripts.js'
     ], 'js/' + theme + '.js');

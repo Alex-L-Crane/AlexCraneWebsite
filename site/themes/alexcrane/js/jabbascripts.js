@@ -1,6 +1,6 @@
 Vue.directive('scroll', {
     inserted: function(el, binding) {
-        var f = function(evt) {
+        let f = function(evt) {
             if (binding.value(evt, el)) {
                 window.removeEventListener('scroll', f);
             }
