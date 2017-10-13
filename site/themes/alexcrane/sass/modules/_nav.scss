@@ -32,14 +32,14 @@
     width: 144px;
     height: 80px;
     & a {
-      font-size: 22px;
-      font-weight: $font-weight--book;
+      font-size: 18px;
+      font-weight: $font-less--book;
       line-height: 80px;
       vertical-align: middle;
       text-transform: uppercase;
       cursor: pointer;
       text-decoration: none;
-      color: $med-gray;
+      color: $light-gray;
     }
     @include m(active) {
       & a {
@@ -51,11 +51,11 @@
   @include m(home){
     & .m-main-nav-full__link {
       & a {
-        color: $light-blue-gray;
+        color: $base-blue;
       }
       @include m(active) {
         & a {
-          border-top: 2px solid $light-blue-gray;
+          border-top: 2px solid $base-blue;
         }
       }
     }
@@ -113,7 +113,7 @@
     text-align: center;
     & a {
       font-size: 26px;
-      font-weight: $font-weight--book;
+      font-weight: $font-less--book;
       line-height: 60px;
       vertical-align: middle;
       text-transform: uppercase;
@@ -123,7 +123,7 @@
     }
     @include m(active) {
       & a {
-        font-weight: $font-weight--bold;
+        font-weight: $font-less--book;
       }
     }
   }
@@ -202,7 +202,7 @@
     float: right;
     & a {
       font-size: 18px;
-      font-weight: $font-weight--book;
+      font-weight: $font-less--book;
       line-height: 50px;
       vertical-align: middle;
       text-transform: uppercase;

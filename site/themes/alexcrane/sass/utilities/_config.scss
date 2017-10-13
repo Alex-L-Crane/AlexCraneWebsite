@@ -5,96 +5,86 @@
 
 // Font import
 //---------------------------------------------
+
 @font-face {
-    font-family: '../../../../assets/fonts/CenturyGothic';
-    SRC: url('../../../../assets/fonts/CenturyGothic.ttf')  format('truetype');
+    font-family: 'LessSans';
+    src: url('../../../../assets/fonts/Less.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LessSans';
+    src: url('../../../../assets/fonts/Less-Light.otf') format('opentype');
+    font-weight: light;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LessSans';
+    src: url('../../../../assets/fonts/Less-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 
 // Font stacks
 //---------------------------------------------
 
-//$font-family            : 'Yantramanav', sans-serif;
-//$font-family--h-script    : 'Waiting for the Sunrise', cursive;
-//$font-family--p-script    : 'Open Sans', sans-serif;
-$font-family--h-script    : 'CenturyGothic', sans-serif;
-$font-family--p-script    : 'CenturyGothic', sans-serif;
-
-
-// Font weights - Yantramanav
-//---------------------------------------------
-
-//$font-weight--light     : 100;
-//$font-weight--book      : 300;
-//$font-weight--bold      : 500;
-
-
-// Font sizes - Yantramanav
-//---------------------------------------------
-//$font-size-h1           : 64px;
-//$font-size-h2           : 48px;
-//$font-size-h3           : 32px;
-//$font-size-h4           : 24px;
-//$font-size-h5           : 14px;
-//$font-size-h6           : 12px;
-//$font-size-p            : 16px;
+$font-family--work              : 'Work Sans', sans-serif;
+$font-family--less              : 'LessSans', sans-serif;
 
 
 // Font weights
 //---------------------------------------------
 
-$font-weight--light     : 300;
-$font-weight--book      : 400;
-$font-weight--bold      : 600;
+$font-work--book      : 400;
+$font-work--med       : 500;
+$font-work--bold      : 700;
+
+$font-less--light     : light;
+$font-less--book      : normal;
+$font-less--bold      : bold;
 
 
 // Font sizes
 //---------------------------------------------
-$font-size-h1           : 80px;
-$font-size-h2           : 58px;
-$font-size-h3           : 40px;
-$font-size-h4           : 28px;
-$font-size-h5           : 18px;
-$font-size-h6           : 14px;
-$font-size-p            : 16px;
+$font-size-h1           : 6rem;
+$font-size-h2           : 4rem;
+$font-size-h3           : 3rem;
+$font-size-h4           : 1.5rem;
+$font-size-h5           : 1.5rem;
+$font-size-h6           : 1.5rem;
+$font-size-p            : 1.125rem;
 
 
-// Descriptive base colors
+// Line heights
+//---------------------------------------------
+$line-height-h1          : 1.083;
+$line-height-h2          : 1.222;
+$line-height-h3          : 1.127;
+$line-height-h4          : 1.5;
+$line-height-h5          : 1.5;
+$line-height-h6          : 1.5;
+$line-height-p           : 1.778;
+
+
+// Colors
 //---------------------------------------------
 
 $white                  : #FFFFFF;
 $black                  : #000000;
 
+// Primary palette
+
+$base-blue              : #ABBACD;
+$base-purple            : #9a90ac;
+$base-red               : #C82E5C;
+
 // Grays
-$porcelain              : #F2F4F5;
-$iron                   : #D7D9DC;
-$river-bed              : #444E58;
-$mirage                 : #15222E;
-$woodsmoke              : #101213;
 
-$casper                 : #ABBACD;
+$light-gray               : #F2f4f5;
+$med-gray                 : #596066;
+$dark-gray                : #15222E;
 
-// Reds
-$alizarin-crimson       : #D81F26;
-$roof-terracotta        : #B11F24;
-$falu-red               : #8B181A;
-$paco                   : #471111;
-
-
-// Color usage
-//---------------------------------------------
-
-$light-gray               : $porcelain;
-$med-gray                 : $iron;
-$dark-gray                : $river-bed;
-$darkest-gray             : $woodsmoke;
-
-$light-blue-gray          : $casper;
-
-$light-red                : $alizarin-crimson;
-$med-red                  : $roof-terracotta;
-$dark-red                 : $falu-red;
-$darkest-red              : $paco;
 
 $transparent-dark-gray    : rgba(17, 18, 20, 0.7);
 $transparent-light-gray      : rgba(242, 244, 245, 0.9);

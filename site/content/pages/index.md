@@ -11,7 +11,7 @@ prev_page_link: contact
 prev_page_title: Contact
 intro:
   title: A lifelong journey
-  video: assets/img/lego-video-v1.mp4
+  preview_image: assets/img/desk-1333x1333-bw.jpg
   copy: |
     The world is a beautiful place... sometimes.
 
@@ -24,7 +24,7 @@ visuals:
 audio:
   identification: homeAudioPlayer
   title: Rhythm and melody
-  video: assets/img/homepage-audio-video-v2.mp4
+  preview_image: assets/img/desk-1333x1333-bw.jpg
   copy: |
     Approaching music creation as a discipline has brought me satisfaction and a sense of purpose. Over time I've felt music form a symbiotic relationship with every aspect of my life. There is always something new to be discovered in sound.
 id: db0ae4e3-4f10-4802-bc40-0b880cbf02c7

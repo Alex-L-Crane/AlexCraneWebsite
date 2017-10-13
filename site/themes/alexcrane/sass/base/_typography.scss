@@ -1,25 +1,92 @@
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font-family--h-script;
-	font-weight: $font-weight--book;
-	margin: 0 0 $gap -1px;
+	font-family: $font-family--less;
+	font-weight: $font-less--book;
+	letter-spacing: -0.02em;
+	vertical-align: baseline;
+	color: $med-gray;
+	margin: 0;
+	padding: 0;
 }
 
-h1 { font-size: $font-size-h1; }
-h2 { font-size: $font-size-h2; }
-h3 { font-size: $font-size-h3; }
-h4 { font-size: $font-size-h4; }
-h5 { font-size: $font-size-h5; }
-h6 {
-	font-size: $font-size-h6;
-	letter-spacing: .15em;
-	text-transform: uppercase;
-	em {
-		font-style: normal;
+h1 {
+	font-family: $font-family--work;
+	font-size: $font-size-h1;
+	line-height: $line-height-h1;
+	font-weight: $font-work--bold;
+    margin-bottom: 0.167em;
+	&.uppercase {
+		text-transform: uppercase;
 	}
 }
 
-p { font-family: $font-family--p-script;
-	font-size: $font-size-p;
-	letter-spacing: .02em;
-	line-height: 1.5em;
+h2 {
+	font-family: $font-family--work;
+	font-size: $font-size-h2;
+	line-height: $line-height-h2;
+	font-weight: $font-work--med;
+	margin-bottom: 0.111em;
 }
+
+h3 {
+	font-size: $font-size-h3;
+	line-height: $line-height-h3;
+	font-weight: $font-less--book;
+	margin-bottom: 0.333em;
+}
+
+h4 {
+	font-size: $font-size-h4;
+	line-height: $line-height-h4;
+	font-weight: $font-less--bold;
+	margin-bottom: 0.5em;
+}
+h5 {
+	font-size: $font-size-h5;
+	line-height: $line-height-h5;
+	font-weight: $font-less--book;
+	margin-bottom: 0.5em;
+}
+
+h6 {
+	font-size: $font-size-h6;
+	font-weight: $font-less--light;
+	margin-bottom: 0.5em;
+}
+
+p {
+	line-height: $line-height-p;
+	margin-bottom: 1.778em;
+}
+
+strong {
+	color: $med-gray;
+	font-weight: $font-less--bold;
+}
+
+em {
+	font-style: italic;
+}
+
+a {
+	color: $med-gray;
+	font-weight: $font-less--bold;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul,ol {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+	padding-left: 1.1em;
+}
+
+li {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+
+

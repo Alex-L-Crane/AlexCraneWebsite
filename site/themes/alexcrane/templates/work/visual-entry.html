@@ -1,8 +1,12 @@
 	{{ partial:entry-banner }}
 
-<section class="l-content">
-
-	{{ skills }}
-	{{ content }}
-
+<section class="l-content l-content--visual-entry" >
+	<div class="m-entry-wrap">
+		<h2>The Project</h2>
+		<p class="unit size1of2">{{ project_intro }}</p>
+		<img class="unit size1of2" src="{{ project_image }}" width="500" />
+		{{ project_content | markdown}}
+		<hr>
+	    {{ content }}
+	</div>
 </section>

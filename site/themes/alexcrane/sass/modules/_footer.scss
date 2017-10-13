@@ -18,9 +18,9 @@
     text-align: center;
     & a {
       text-decoration: none;
-      color: $darkest-gray;
+      color: $dark-gray;
       font-size: 28px;
-      font-weight: $font-weight--book;
+      font-weight: $font-less--book;
       line-height: 100px;
       vertical-align: middle;
       background-color: $med-gray;
@@ -55,12 +55,12 @@
 
 footer {
   height: 180px;
-  background-color: $darkest-gray;
+  background-color: $black;
   padding: 0 10%;
   & span {
-    color: rgba(242, 244, 245, 0.3);
+    color: $med-gray;
     font-size: 16px;
-    font-weight: $font-weight--light;
+    font-weight: $font-less--book;
     line-height: 180px;
     vertical-align: middle;
   }

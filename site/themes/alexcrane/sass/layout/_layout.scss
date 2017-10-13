@@ -17,6 +17,9 @@
 	position: relative;
 	@include size1of1();
 	height: auto;
+	@include m(visual-entry) {
+		background-color: $light-gray;
+	}
 }
 
 .l-footer{

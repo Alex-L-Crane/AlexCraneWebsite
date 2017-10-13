@@ -4,7 +4,7 @@
 
 <section class="l-content">
 
-    {{ collection:work paginate="true" as="entries" }}
+    {{ collection:work paginate="true" as="entries" taxonomy:tags="featured" }}
         {{ entries }}
             {{ partial:preview-fullwidth }}
         {{ /entries }}
