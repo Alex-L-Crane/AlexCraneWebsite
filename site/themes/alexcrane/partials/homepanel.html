@@ -1,16 +1,19 @@
-<section class="m-home-panel" {{if identification }} v-observe-visibility="{{ identification }}" {{ /if }}>
-    {{if preview_image }}
-    <img src="{{ preview_image }}" class="m-home-panel__img m-home-panel__img--right">
-    {{ /if }}
+<section class="m-home-panel__wrap">
+    <section class="m-home-panel">
+        <div class="m-home-panel__bar"></div>
 
-    {{if video }}
-    <video src="{{ video }}" id="{{ identification }}" class="m-home-panel__img m-home-panel__img--right" loop></video>
-    {{ /if }}
+        {{if preview_image }}
+        <div class="m-home-panel__img-wrap">
+            <img src="{{ preview_image }}" class="m-home-panel__img m-home-panel__img--right">
+        </div>
+        {{ /if }}
 
-    <div class="m-home-panel__badge m-home-panel__badge--left">
-        <h5> {{ title }} </h5>
-        {{ copy | markdown}}
-    </div>
-    <div style="clear: both"></div>
+        <div class="m-home-panel__badge m-home-panel__badge--left">
+            <h5 class="color-light-gray">{{ title }}</h5>
+            {{ copy | markdown}}
+        </div>
+
+        <div class="clear"></div>
+    </section>
 </section>
 

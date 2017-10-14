@@ -2,6 +2,14 @@
 //    #Hero Image
 //------------------------------------
 
+.m-hero-image {
+  position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  z-index: 0;
+}
 .m-hero-bg {
   object-fit: cover;
   position: absolute;
@@ -13,12 +21,7 @@
   height: 100%;
   margin: auto;
   background: transparent;
-  @include m(vid) {
-    z-index: 460;
-  }
-  @include m(img) {
-    z-index: 450;
-  }
+  //filter: grayscale(.3);
 }
 
 .m-logo-wrap {

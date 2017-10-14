@@ -1,20 +1,18 @@
 <div class="l-hero-wrap">
-    {{ if intro_video }}
-        <video
-                {{ if template == 'home' }}v-if="logoHovering"{{/if }}
-                src="{{ intro_video }}" class="m-hero-bg m-hero-bg--vid" autoplay loop>
-        </video>
-    {{ /if }}
-
-    {{ if intro_image }}
-        <img src="{{ intro_image }}" class="m-hero-bg m-hero-bg--img" />
-    {{ /if }}
-
-
+    <!--{{ if intro_video }}
+        <video src="{{ intro_video }}" class="m-hero-bg m-hero-bg--vid" autoplay loop></video>
+    {{ /if }}-->
     <div class="m-logo-wrap">
-        <div class="m-logo-container" v-on:mouseover="logoHover" v-on:mouseout="logoHover">
-            <img src="{{ logo }}">
+        <div class="m-logo-container">
+            <div id="trigger-element"></div>
+            <img id="pin-this" src="{{ logo }}">
         </div>
     </div>
 
 </div>
+
+{{ if intro_image }}
+<div class="m-hero-image">
+    <img src="{{ intro_image }}" class="m-hero-bg" />
+</div>
+{{ /if }}

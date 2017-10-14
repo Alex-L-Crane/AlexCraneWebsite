@@ -17,6 +17,10 @@
 	position: relative;
 	@include size1of1();
 	height: auto;
+	@include m(home) {
+		padding-bottom: 256px;
+		background-color: rgba( $black, 0.6 );
+	}
 	@include m(visual-entry) {
 		background-color: $light-gray;
 	}

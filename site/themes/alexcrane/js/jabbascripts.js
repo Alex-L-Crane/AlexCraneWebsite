@@ -25,8 +25,7 @@ var app = new Vue({
          headerBG: false,
          folioHover: false,
          homeAudioVisible: false,
-         vid: '',
-         logoHovering: false
+         vid: ''
      },
      methods: {
          appScroll: function(evt, el) {
@@ -91,18 +90,34 @@ var app = new Vue({
              this.homeAudioVisible = homeAudioVisible;
              this.vid = document.getElementById("homeAudioPlayer");
 
-            if (this.homeAudioVisible) {
+            /*if (this.homeAudioVisible) {
                 this.vid.play();
             } else {
                 this.vid.pause();
-            };
+            };*/
          },
          folioLinkHover: function () {
              this.folioHover = !this.folioHover;
-         },
-         logoHover: function () {
-             console.log('logoHovering');
-            this.logoHovering = !this.logoHovering;
          }
      }
  });
+
+$(function() {
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    /*var tween = TweenMax.to('#pin-this', 0.5, {
+        opacity: 0
+    });*/
+
+    // create a scene
+    new ScrollMagic.Scene({
+        triggerElement: '#trigger-element',
+        offset: -100
+    })
+        .setTween('#pin-this', 0.5, {
+            opacity: 0
+        })
+        .addIndicators({name: "something"})
+        .addTo(controller); // assign the scene to the controller
+});

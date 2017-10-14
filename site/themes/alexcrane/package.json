@@ -6,6 +6,8 @@
     "vue-waypoint": "^2.5.0"
   },
   "dependencies": {
-    "gulp-update": "0.0.2"
+    "gulp-update": "0.0.2",
+    "jquery": "^3.2.1",
+    "scrollmagic": "^2.0.5"
   }
 }

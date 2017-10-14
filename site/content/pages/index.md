@@ -15,7 +15,7 @@ intro:
   copy: |
     The world is a beautiful place... sometimes.
 
-    I've spent my time picking through the good and the bad, perfecting my creative rhythm. I believe having a creative discipline is the key to life's greatest rewards.
+    I've dedicated my life to the visual and audio arts. I approach opportunities and obstacles as a chance to improve my creative rhythm. I believe having a creative discipline is the key to life's greatest rewards.
 visuals:
   title: Composition and color
   preview_image: assets/img/desk-1333x1333-bw.jpg

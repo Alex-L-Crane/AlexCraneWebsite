@@ -3,6 +3,11 @@
 //------------------------------------
 
 
+// Colors
+//---------------------------------------------
+@mixin clear {
+    clear: both;
+}
 
 // Colors
 //---------------------------------------------
@@ -91,6 +96,178 @@
     // _margin-right:-3px;
 }
 
+// Top Margins
+
+@mixin top-16 {
+    margin-top: $gap;
+}
+
+@mixin top-32 {
+    margin-top: $gap * 2;
+}
+
+@mixin top-48 {
+    margin-top: $gap * 3;
+}
+
+@mixin top-64 {
+    margin-top: $gap * 4;
+}
+
+@mixin top-80 {
+    margin-top: $gap * 5;
+}
+
+@mixin top-96 {
+    margin-top: $gap * 6;
+}
+
+@mixin top-112 {
+    margin-top: $gap * 7;
+}
+
+@mixin top-128 {
+    margin-top: $gap * 8;
+}
+
+@mixin top-192 {
+    margin-top: $gap * 12;
+}
+
+@mixin top-256 {
+    margin-top: $gap * 16;
+}
+
+
+// Right Margins
+
+@mixin right-16 {
+    margin-right: $gap;
+}
+
+@mixin right-32 {
+    margin-right: $gap * 2;
+}
+
+@mixin right-48 {
+    margin-right: $gap * 3;
+}
+
+@mixin right-64 {
+    margin-right: $gap * 4;
+}
+
+@mixin right-80 {
+    margin-right: $gap * 5;
+}
+
+@mixin right-96 {
+    margin-right: $gap * 6;
+}
+
+@mixin right-112 {
+    margin-right: $gap * 7;
+}
+
+@mixin right-128 {
+    margin-right: $gap * 8;
+}
+
+@mixin right-192 {
+    margin-right: $gap * 12;
+}
+
+@mixin right-256 {
+    margin-right: $gap * 16;
+}
+
+
+// Bottom Margins
+
+@mixin bottom-16 {
+    margin-bottom: $gap;
+}
+
+@mixin bottom-32 {
+    margin-bottom: $gap * 2;
+}
+
+@mixin bottom-48 {
+    margin-bottom: $gap * 3;
+}
+
+@mixin bottom-64 {
+    margin-bottom: $gap * 4;
+}
+
+@mixin bottom-80 {
+    margin-bottom: $gap * 5;
+}
+
+@mixin bottom-96 {
+    margin-bottom: $gap * 6;
+}
+
+@mixin bottom-112 {
+    margin-bottom: $gap * 7;
+}
+
+@mixin bottom-128 {
+    margin-bottom: $gap * 8;
+}
+
+@mixin bottom-192 {
+    margin-bottom: $gap * 12;
+}
+
+@mixin bottom-256 {
+    margin-bottom: $gap * 16;
+}
+
+
+// Left Margins
+
+@mixin left-16 {
+    margin-left: $gap;
+}
+
+@mixin left-32 {
+    margin-left: $gap * 2;
+}
+
+@mixin left-48 {
+    margin-left: $gap * 3;
+}
+
+@mixin left-64 {
+    margin-left: $gap * 4;
+}
+
+@mixin left-80 {
+    margin-left: $gap * 5;
+}
+
+@mixin left-96 {
+    margin-left: $gap * 6;
+}
+
+@mixin left-112 {
+    margin-left: $gap * 7;
+}
+
+@mixin left-128 {
+    margin-left: $gap * 8;
+}
+
+@mixin left-192 {
+    margin-left: $gap * 12;
+}
+
+@mixin left-256 {
+    margin-left: $gap * 16;
+}
+
+
 @mixin size1of1 {
     float: none;
     width: 100%;
@@ -146,75 +323,39 @@
 @mixin size9of10 {
     width: 90%;
 }
-@mixin height8 {
-    height: 8px;
+
+@mixin height-16 {
+    height: $gap;
 }
-@mixin height16 {
-    height: 16px;
+
+@mixin height-32 {
+    height: $gap * 2;
 }
-@mixin height24 {
-    height: 24px;
+
+@mixin height-48 {
+    height: $gap * 3;
 }
-@mixin height32 {
-    height: 32px;
+
+@mixin height-64 {
+    height: $gap * 4;
 }
-@mixin height40 {
-    height: 40px;
+
+@mixin height-80 {
+    height: $gap * 5;
 }
-@mixin height48 {
-    height: 48px;
+
+@mixin height-96 {
+    height: $gap * 6;
 }
-@mixin height56 {
-    height: 56px;
+
+@mixin height-112 {
+    height: $gap * 7;
 }
-@mixin height64 {
-    height: 64px;
+
+@mixin height-128 {
+    height: $gap * 8;
 }
-@mixin height72 {
-    height: 72px;
-}
-@mixin height80 {
-    height: 80px;
-}
-@mixin height88 {
-    height: 88px;
-}
-@mixin height96 {
-    height: 96px;
-}
-@mixin height104 {
-    height: 104px;
-}
-@mixin height112 {
-    height: 112px;
-}
-@mixin height120 {
-    height: 120px;
-}
-@mixin height128 {
-    height: 128px;
-}
-@mixin height136 {
-    height: 136px;
-}
-@mixin height144 {
-    height: 144px;
-}
-@mixin height152 {
-    height: 152px;
-}
-@mixin height160 {
-    height: 160px;
-}
-@mixin height168 {
-    height: 168px;
-}
-@mixin height176 {
-    height: 176px;
-}
-@mixin height184 {
-    height: 184px;
-}
-@mixin height192 {
-    height: 192px;
+
+@mixin height-192 {
+    height: $gap * 12;
 }
