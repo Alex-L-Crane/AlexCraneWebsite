@@ -12,34 +12,51 @@
   position: fixed;
   top: 0;
   background-color: transparent;
-  z-index: 1000;
+  z-index: 2000;
 }
 
-.m-main-nav-full {
-  width: 100%;
-  position: absolute;
+.m-main-nav {
+  @include e(wrap) {
+    width: 100%;
+    position: absolute;
     top: 0;
-  -moz-transition: top 0.5s ease-in-out;
-  transition: top 0.5s ease-in-out;
-  @extend %clearfix;
-  @include e(ul){
-    @extend %horizontal-ul;
-    float: right;
+    transition: top 0.5s ease-in-out;
+    @extend %clearfix;
+  }
+  @include e(ul) {
+    list-style-type: none;
     text-align: center;
+    display: block;
+    width: 35%;
+    margin: 0 20% 0 45%;
+    padding: 0;
   }
   @include e(link) {
-    @extend %horizontal-li;
-    width: 144px;
-    height: 60px;
+    width: auto;
+    height: 40px;
+    display: inline-block;
+    margin: 30px auto 0 auto;
     & a {
+      width: 124px;
+      display: inline-block;
       font-size: 18px;
       font-weight: $font-less--book;
-      line-height: 60px;
+      line-height: 18px;
+      padding: 11px 0 9px 0;
+      border: 1px solid transparent;
+      border-radius: $br--three;
+      background-color: rgba( $base-blue, 0.2);
       vertical-align: middle;
       text-transform: uppercase;
       cursor: pointer;
       text-decoration: none;
-      color: $light-gray;
+      color: $base-blue;
+      transition: border-color 0.5s ease-in-out, border 0.5s ease-in-out;
+      &:hover {
+        color: $base-blue;
+        border: 1px solid $base-blue;
+        background-color: rgba( $base-purple, 0.2);
+      }
     }
     @include m(active) {
       & a {
@@ -48,337 +65,28 @@
       }
     }
   }
-  @include m(home){
-    & .m-main-nav-full__link {
-      & a {
-        color: $base-blue;
-      }
-      @include m(active) {
-        & a {
-          border-top: 2px solid $base-blue;
-        }
-      }
-    }
-  }
-  @include m(hidden) {
-    top: -100px;
-  }
-  @include m(bg) {
-    background-color: $transparent-dark-gray;
-    & .m-main-nav-full__link {
-      & a {
-        color: $light-gray;
-      }
-      @include m(active) {
-        & a {
-          border-top: 2px solid $light-gray;
-        }
-      }
-    }
+  @include m(dark) {
+
   }
 }
 
-// Main Navigation Mobile
-//---------------------------------------------
-
-.m-main-nav-mobile {
+.m-nav-overlay {
   width: 100%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  -moz-transition: top 0.5s ease-in-out;
-  transition: top 0.5s ease-in-out;
-  @extend %clearfix;
-  @include e(bar) {
-    width: 100%;
-    height: 80px;
-    color: $med-gray;
-    background-color: $transparent-dark-gray;
-    text-align: center;
-    font-size: 22px;
-    line-height: 80px;
-    vertical-align: middle;
-    text-transform: uppercase;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  @include e(ul){
-    width: auto;
-    @extend %horizontal-ul;
-    display: none;
-    padding: 10%;
-  }
-  @include e(link) {
-    width: 100%;
-    text-align: center;
-    & a {
-      font-size: 26px;
-      font-weight: $font-less--book;
-      line-height: 60px;
-      vertical-align: middle;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-decoration: none;
-      color: $med-gray;
-    }
-    @include m(active) {
-      & a {
-        font-weight: $font-less--book;
-      }
-    }
-  }
-  @include m(hidden) {
-    top: -100px;
-  }
-  @include m(open){
-    position: fixed;
-    top: 0;
-    right: 0;
+  height: 0;
+  position: fixed;
     bottom: 0;
     left: 0;
-    margin: 0;
-    padding: 0;
-    background-color: $transparent-dark-gray;
-    z-index: 2000;
-    & .m-main-nav-mobile__ul {
-      display: block;
-    }
-    & .m-main-nav-mobile__bar {
-      display: none;
-    }
+  overflow: hidden;
+  background-color: $dark-gray;
+  transition: height 0.5s ease-in-out;
+  z-index: 1500;
+  @include m(visible) {
+    height: 100%;
   }
 }
-
-
-
-// Sub Navigation
-//---------------------------------------------
-
-.m-subnav {
-  width: 100%;
-  height: 50px;
-  position: fixed;
-  bottom: 0;
-  background-color: transparent;
-  z-index: 1000;
-  margin: 0;
-  padding: 0 ;
-  -moz-transition: bottom 0.5s ease-in-out;
-  transition: bottom 0.5s ease-in-out;
-  @include m(footer) {
-    position: absolute;
-    -moz-transition: bottom 0.05s ease-in-out;
-    transition: bottom 0.05s ease-in-out;
-  }
-  @include e(bar) {
-    width: 180px;
-    height: 50px;
-    position: absolute;
-      bottom: 0;
-      right: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: $transparent-dark-gray;
-    -moz-transition: width 1s ease-in-out;
-    transition: width 1s ease-in-out;
-    @include m(open) {
-      width: 100%;
-    }
-  }
-  @include m(hidden) {
-    bottom: -60px;
-  }
-  @include e(ul){
-    @extend %horizontal-ul;
-    width: 1400px;
-    display: block;
-    float: right;
-    text-align: center;
-  }
-  @include e(link) {
-    width: 180px;
-    height: 50px;
-    float: right;
-    & a {
-      font-size: 18px;
-      font-weight: $font-less--book;
-      line-height: 50px;
-      vertical-align: middle;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-decoration: none;
-      color: $med-gray;
-    }
-  }
-}
-/*.m-subnav-full {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  bottom: 0;
-  -moz-transition: bottom 0.5s ease-in-out;
-  transition: bottom 0.5s ease-in-out;
-  background-color: $transparent-dark-gray;
-  @extend %clearfix;
-  & a.back-link {
-    width: 180px;
-    display: inline-block;
-    font-size: 18px;
-    line-height: 50px;
-    vertical-align: middle;
-    text-align: center;
-    color: $med-gray;
-    text-decoration: none;
-    border-radius: $br--default;
-    background-image: url('#{$img-path--rel}left-arrow-light.svg');
-    background-repeat: no-repeat;
-    background-size: 8px 8px;
-    background-position: 10% 50%;
-  }
-  @include e(ul){
-    @extend %horizontal-ul;
-    float: right;
-    text-align: center;
-  }
-  @include e(link) {
-    @extend %horizontal-li;
-    width: 180px;
-    height: 50px;
-    & a {
-      font-size: 18px;
-      font-weight: $font-weight--book;
-      line-height: 50px;
-      vertical-align: middle;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-decoration: none;
-      color: $med-gray;
-      &:hover {
-        font-weight: $font-weight--bold;
-      }
-    }
-    @include m(active) {
-      & a {
-        font-weight: $font-weight--bold;
-      }
-    }
-  }
-  @include m(hidden) {
-    bottom: -100px;
-  }
-}
-
-.m-subnav {
-  @include m(footer) {
-    .m-subnav-full {
-      -moz-transition: bottom 0.05s ease-in-out;
-      transition: bottom 0.05s ease-in-out;
-    }
-  }
-}
-
-.m-subnav-mobile {
-  width: 100%;
-  height: auto;
-  position: fixed;
-  bottom: 0;
-  background-color: transparent;
-  z-index: 1000;
-  @extend %clearfix;
-  @include e(inner){
-    @extend %horizontal-ul;
-    text-align: center;
-    display: none;
-  }
-  @include e(link) {
-    width: 100%;
-    text-align: center;
-    & a {
-      font-size: 26px;
-      font-weight: $font-weight--book;
-      line-height: 60px;
-      vertical-align: middle;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-decoration: none;
-      color: $med-gray;
-    }
-    @include m(active) {
-      & a {
-        font-weight: $font-weight--bold;
-      }
-    }
-  }
-  @include m(closed) {
-    width: 144px;
-    height: 50px;
-    float: right;
-    text-align: center;
-    font-size: 18px;
-    font-weight: $transparent-dark-gray;
-    line-height: 50px;
-    vertical-align: middle;
-    text-transform: uppercase;
-    cursor: pointer;
-    text-decoration: none;
-    color: $light-blue-gray;
-  }
-  @include m(open){
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    padding: 10%;
-    background-color: $transparent-dark-gray;
-    z-index: 2000;
-  }
-  & a.back-link {
-    width: 180px;
-    display: inline-block;
-    font-size: 18px;
-    line-height: 50px;
-    vertical-align: middle;
-    text-align: center;
-    color: $light-blue-gray;
-    text-decoration: none;
-  }
-  @include m(scrolled) {
-    background-color: $transparent-dark-gray;
-    & .m-subnav-mobile__inner {
-      display: block;
-    }
-    & .m-subnav-mobile__link {
-      display: block;
-      & a {
-        color: $med-gray;
-      }
-    }
-    & a.back-link {
-      color: $med-gray;
-    }
-  }
-  @include m(footer-scroll) {
-    &.m-subnav-mobile {
-      position: absolute;
-    }
-  }
-}*/
-
 
 @media (min-width: $breakpoint-tablet) {
-  .m-main-nav-mobile {
-    display: none;
-  }
 }
 
 @media (max-width: $breakpoint-tablet) {
-  .m-main-nav-full {
-    display: none;
-  }
-  .m-main-nav-mobile {
-    display: block;
-  }
 }

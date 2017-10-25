@@ -3,8 +3,11 @@ title: Home
 #layout: vue
 template: home
 intro_video: assets/img/oceanscape-2.mp4
-intro_image: assets/img/oceanscape-v1.jpg
-logo: assets/img/alex-crane-design-voyager.svg
+intro_image: assets/img/astronaut-optomized-v2.svg
+logo: assets/img/AC-voyager-logo-optomized-v3.svg
+moon: assets/img/nasa-45068-color.png
+space_bg: assets/img/spacescape-raster-background.jpg
+vector_bg: assets/img/spacescape-vector-background.svg
 next_page_link: visuals
 next_page_title: View Visual Work
 prev_page_link: contact

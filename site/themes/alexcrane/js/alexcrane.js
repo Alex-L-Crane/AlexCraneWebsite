@@ -1,6 +1,11 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'assets/particles.json', function () {
+    console.log('callback - particles.js config loaded');
+});
+
 Vue.directive('scroll', {
     inserted: function inserted(el, binding) {
         var f = function f(evt) {
@@ -23,6 +28,7 @@ var app = new Vue({
         lastScrollTop: 0,
         scrollTop: 0,
         scrollingDown: false,
+        navOpen: false,
         hideHeadNav: false,
         hideSubNav: false,
         headerBG: false,
@@ -78,6 +84,9 @@ var app = new Vue({
         subNavHover: function subNavHover() {
             this.hideSubNav = false;
         },
+        toggleNav: function toggleNav() {
+            this.navOpen = !this.navOpen;
+        },
         toggleMobileNav: function toggleMobileNav() {
             this.mobileNavOpen = !this.mobileNavOpen;
         },
@@ -105,22 +114,25 @@ var app = new Vue({
     }
 });
 
-$(function () {
+/*$(function() {
     // init controller
-    var controller = new ScrollMagic.Controller();
+    var controller = new ScrollMagic.Controller();*/
 
-    /*var tween = TweenMax.to('#pin-this', 0.5, {
-        opacity: 0
-    });*/
+/*var tween = TweenMax.to('#pin-this', 0.5, {
+    opacity: 0
+});*/
 
-    // create a scene
-    new ScrollMagic.Scene({
-        triggerElement: '#trigger-element',
-        offset: -100
-    }).setTween('#pin-this', 0.5, {
-        opacity: 0
-    }).addIndicators({ name: "something" }).addTo(controller); // assign the scene to the controller
-});
+// create a scene
+/* new ScrollMagic.Scene({
+     triggerElement: '#trigger-element',
+     offset: -100
+ })
+     .setTween('#pin-this', 0.5, {
+         opacity: 0
+     })
+     .addIndicators({name: "something"})
+     .addTo(controller); // assign the scene to the controller
+});*/
 
 },{}],2:[function(require,module,exports){
 "use strict";

@@ -7,8 +7,8 @@
 }
 
 .l-hero-wrap {
-	position:relative;
 	@include size1of1();
+	position:relative;
 	height:100vh;
 	overflow: hidden;
 }

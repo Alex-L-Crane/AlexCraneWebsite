@@ -1,3 +1,12 @@
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load(
+    'particles-js',
+    'assets/particles.json',
+    function () {
+        console.log('callback - particles.js config loaded');
+    }
+);
+
 Vue.directive('scroll', {
     inserted: function(el, binding) {
         let f = function(evt) {
@@ -20,6 +29,7 @@ var app = new Vue({
          lastScrollTop: 0,
          scrollTop: 0,
          scrollingDown: false,
+         navOpen: false,
          hideHeadNav: false,
          hideSubNav: false,
          headerBG: false,
@@ -75,6 +85,9 @@ var app = new Vue({
          subNavHover: function () {
              this.hideSubNav = false;
          },
+         toggleNav: function () {
+            this.navOpen = !this.navOpen;
+         },
          toggleMobileNav: function() {
              this.mobileNavOpen = !this.mobileNavOpen;
          },
@@ -102,16 +115,16 @@ var app = new Vue({
      }
  });
 
-$(function() {
+/*$(function() {
     // init controller
-    var controller = new ScrollMagic.Controller();
+    var controller = new ScrollMagic.Controller();*/
 
     /*var tween = TweenMax.to('#pin-this', 0.5, {
         opacity: 0
     });*/
 
     // create a scene
-    new ScrollMagic.Scene({
+   /* new ScrollMagic.Scene({
         triggerElement: '#trigger-element',
         offset: -100
     })
@@ -120,4 +133,4 @@ $(function() {
         })
         .addIndicators({name: "something"})
         .addTo(controller); // assign the scene to the controller
-});
+});*/

@@ -1,3 +1,18 @@
 site_name: Alex Crane
 author_name: Niles Peppertrout
 id: d9bfc09a-3a90-41d3-8acc-3f551f8432af
+behance:
+  icon: assets/img/icons/behance_icon.svg
+  url: https://www.behance.net/alexcraned6811
+linkedin:
+  icon: assets/img/icons/linkedin_icon.svg
+  url: https://www.linkedin.com/in/alex-l-crane/
+instagram:
+  icon: assets/img/icons/instagram_icon.svg
+  url: https://www.instagram.com/alexlcrane/
+twitter:
+  icon: assets/img/icons/twitter_icon.svg
+  url: https://twitter.com/DissonantDesign
+facebook:
+  icon: assets/img/icons/facebook_icon.svg
+  url: https://www.facebook.com/TheCruelestMusic/
