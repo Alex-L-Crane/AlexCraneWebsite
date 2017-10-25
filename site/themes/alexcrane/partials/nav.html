@@ -12,25 +12,6 @@
                 </li>
             </ul>
     </section>
-
-
-    <!--<div class="m-main-nav-mobile"
-         v-if="!subNavOpen"
-         v-bind:class="{'m-main-nav-mobile--hidden': hideHeadNav && !footerVisible,
-                        'm-main-nav-mobile--open': mobileNavOpen}">
-
-        <div class="m-main-nav-mobile__bar"
-             v-on:click="toggleMobileNav">
-            Menu
-        </div>
-
-        <ul class="m-main-nav-mobile__ul">
-            <li class="m-main-nav-mobile__link"><a v-on:click="toggleMobileNav">Close</a></li>
-            {{ nav from="/" include_home="true" }}
-            <li class="m-main-nav-mobile__link {{ if is_current or is_parent }} m-main-nav-mobile--active {{ /if }}"><a href="{{ url }}">{{ title }}</a></li>
-            {{ /nav }}
-        </ul>
-    </div>-->
 </nav>
 
 <section class="m-nav-overlay" v-bind:class="{ 'm-nav-overlay--visible': navOpen }">

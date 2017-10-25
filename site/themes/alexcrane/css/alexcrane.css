@@ -520,15 +520,23 @@ li {
   .m-nav-overlay--visible {
     height: 100%; }
 
+@media (max-width: 768px) {
+  .m-navbar {
+    display: none; } }
+
 .m-home-logo__wrap {
   width: 35%;
   height: auto;
   position: fixed;
-  top: 25%;
+  top: 20%;
   right: 20%;
-  margin: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
   z-index: 500;
-  text-align: center; }
+  text-align: center;
+  transition: right 0.5s ease-in-out, margin-right 0.5s ease-in-out; }
 
 .m-home-logo__logo {
   height: 360px;
@@ -537,14 +545,16 @@ li {
 .m-home-logo__astronaut {
   height: 360px;
   position: fixed;
-  top: 25%;
+  top: 20%;
   right: -20px;
   margin: 0;
   z-index: 500;
   padding-top: 18px; }
 
 .m-moon {
-  width: 100%; }
+  width: 100%;
+  opacity: 100%;
+  transition: opacity 0.5s ease-in-out; }
   .m-moon__wrap {
     height: 34%;
     position: fixed;
@@ -586,7 +596,7 @@ li {
 
 .m-social {
   width: 60px;
-  height: 75%;
+  height: 80%;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -599,12 +609,46 @@ li {
     text-align: left; }
   .m-social__item {
     padding: 24px 14px 0 14px; }
+  .m-social__link--behance img {
+    width: 100%; }
   .m-social__link--linkedin img {
     width: 26px; }
   .m-social__link--instagram img {
     width: 28px; }
+  .m-social__link--twitter img {
+    width: 100%; }
   .m-social__link--facebook img {
     width: 18px; }
+
+@media (max-width: 1024px) {
+  .m-home-logo__wrap {
+    width: 80%;
+    max-width: 375px;
+    height: auto;
+    position: fixed;
+    right: 50%;
+    margin-right: -20%; } }
+
+@media (max-width: 768px) {
+  .m-home-logo__wrap {
+    width: auto;
+    height: auto;
+    top: 0;
+    right: 0;
+    float: right;
+    margin-top: 20px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0; }
+  .m-home-logo__logo {
+    height: 240px;
+    margin: 0; }
+  .m-home-logo__astronaut {
+    top: 260px; }
+  .m-moon {
+    opacity: 0; }
+  .m-social {
+    height: 100%; } }
 
 .svg-triangle path {
   width: 30px;
