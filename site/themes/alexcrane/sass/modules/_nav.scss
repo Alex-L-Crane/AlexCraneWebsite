@@ -2,91 +2,90 @@
 //    #Nav
 //------------------------------------
 
-
 // Main Navigation
 //---------------------------------------------
 
 .m-navbar {
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  top: 0;
-  background-color: transparent;
-  z-index: 2000;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    z-index: 2000;
 }
 
 .m-main-nav {
-  @include e(wrap) {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    transition: top 0.5s ease-in-out;
-    @extend %clearfix;
-  }
-  @include e(ul) {
-    list-style-type: none;
-    text-align: center;
-    display: block;
-    width: 35%;
-    margin: 0 20% 0 45%;
-    padding: 0;
-  }
-  @include e(link) {
-    width: auto;
-    height: 40px;
-    display: inline-block;
-    margin: 30px auto 0 auto;
-    & a {
-      width: 124px;
-      display: inline-block;
-      font-size: 18px;
-      font-weight: $font-less--book;
-      line-height: 18px;
-      padding: 11px 0 9px 0;
-      border: 1px solid transparent;
-      border-radius: $br--three;
-      background-color: rgba( $base-blue, 0.2);
-      vertical-align: middle;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-decoration: none;
-      color: $base-blue;
-      transition: border-color 0.5s ease-in-out, border 0.5s ease-in-out;
-      &:hover {
-        color: $base-blue;
-        border: 1px solid $base-blue;
-        background-color: rgba( $base-purple, 0.2);
-      }
+    @include e(wrap) {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        transition: top 0.5s ease-in-out;
+        @extend %clearfix;
     }
-    @include m(active) {
-      & a {
-        border-top: 2px solid $light-gray;
-        padding-top: 18px;
-      }
+    @include e(ul) {
+        list-style-type: none;
+        text-align: center;
+        display: block;
+        width: 35%;
+        margin: 0 20% 0 45%;
+        padding: 0;
     }
-  }
-  @include m(dark) {
+    @include e(link) {
+        width: auto;
+        height: 40px;
+        display: inline-block;
+        margin: 30px auto 0 auto;
+        & a {
+            width: 124px;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: $font-less--book;
+            line-height: 18px;
+            padding: 11px 0 9px 0;
+            border: 1px solid transparent;
+            border-radius: $br--three;
+            background-color: rgba($base-blue, 0.2);
+            vertical-align: middle;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            color: $base-blue;
+            transition: border-color 0.5s ease-in-out, border 0.5s ease-in-out;
+            &:hover {
+                color: $base-blue;
+                border: 1px solid $base-blue;
+                background-color: rgba($base-purple, 0.2);
+            }
+        }
+        @include m(active) {
+            & a {
+                border-top: 2px solid $light-gray;
+                padding-top: 18px;
+            }
+        }
+    }
+    @include m(dark) {
 
-  }
+    }
 }
 
 .m-nav-overlay {
-  width: 100%;
-  height: 0;
-  position: fixed;
+    width: 100%;
+    height: 0;
+    position: fixed;
     bottom: 0;
     left: 0;
-  overflow: hidden;
-  background-color: $dark-gray;
-  transition: height 0.5s ease-in-out;
-  z-index: 1500;
-  @include m(visible) {
-    height: 100%;
-  }
+    overflow: hidden;
+    background-color: $dark-gray;
+    transition: height 0.5s ease-in-out;
+    z-index: 1500;
+    @include m(visible) {
+        height: 100%;
+    }
 }
 
 @media (max-width: $breakpoint-tablet) {
-  .m-navbar {
-    display: none;
-  }
+    .m-navbar {
+        display: none;
+    }
 }
