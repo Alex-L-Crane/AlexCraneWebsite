@@ -453,10 +453,6 @@ li {
   overflow-y: hidden;
   overflow-x: hidden; }
 
-@media (max-width: 1024px) {
-  .l-hero-wrap {
-    height: auto; } }
-
 .l-content {
   position: relative;
   float: none;
@@ -542,91 +538,67 @@ li {
   .m-navbar {
     display: none; } }
 
-/*.m-home-logo {
-    width: auto;
-    height: auto;
-    position: relative;
-    margin: 160px 0 0 0;
-    z-index: 1000;
-    text-align: center;
-    transition: margin 0.5s ease-in-out;
-    @include e(logo-wrap) {
-        width: auto;
-        float: left;
-    }
-    @include e(logo) {
-        width: 374px;
-        height: auto;
-        position: relative;
-        z-index: 1000;
-        margin: 0 200px 0 0;
-        transition: margin 0.5s ease-in-out;
-    }
-    @include e(astronaut-wrap) {
-        width: auto;
-        float: right;
-        margin: 0 -20px 0 0;
-        padding-top: 18px;
-    }
-    @include e(astronaut) {
-        width: 170px;
-        height: auto;
-        position: relative;
-        z-index: 500;
-        transition: margin 0.5s ease-in-out;
-    }
-}
+.m-home-logo__logo-wrap {
+  width: 70%;
+  height: auto;
+  position: relative;
+  margin: 0 5% 0 25%;
+  padding: 20px 0 0 0; }
+
+.m-home-logo__logo {
+  width: 100%;
+  max-width: 374px;
+  height: auto;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1000;
+  transition: margin 0.5s ease-in-out; }
 
 .m-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba( $dark-gray, 0.4);
-    background-blend-mode: multiply;
-    z-index: 900;
-}
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(21, 34, 46, 0.6);
+  background-blend-mode: multiply;
+  z-index: 900; }
 
-@media (max-width: $breakpoint-tablet-large) {
-    .m-home-logo {
-        @include e(logo-wrap) {
-            width: 100%;
-        }
-        @include e(logo) {
-            margin: 0 auto;
-        }
-        @include e(astronaut-wrap) {
+.m-astronaut__wrap {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: 45%;
+  right: -20px;
+  padding: 40px 0 0 0;
+  z-index: 500; }
 
-        }
-        @include e(astronaut) {
-
-        }
-    }
-}
+.m-astronaut__astronaut {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  position: relative;
+  z-index: 500;
+  transition: margin 0.5s ease-in-out; }
 
 .m-moon {
+  width: 100%;
+  z-index: 800; }
+  .m-moon__wrap {
+    height: 20%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden; }
+  .m-moon__img {
     width: 100%;
-    opacity: 100;
-    z-index: 800;
-    transition: opacity 0.5s ease-in-out;
-    @include e(wrap) {
-        height: 34%;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        overflow: hidden;
-    }
-    @include e(img) {
-        height: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: inherit;
-    }
-}*/
+    height: auto;
+    position: relative;
+    z-index: inherit; }
+
 .m-hero-bg__wrap {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -654,8 +626,8 @@ li {
 
 .m-social {
   width: 60px;
-  position: fixed;
-  top: 160px;
+  position: absolute;
+  top: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(21, 34, 46, 0.5);
@@ -666,6 +638,7 @@ li {
     padding: 0;
     text-align: left; }
   .m-social__item {
+    display: inline-block;
     padding: 24px 14px 0 14px; }
   .m-social__link--behance img {
     width: 100%; }
@@ -677,91 +650,6 @@ li {
     width: 100%; }
   .m-social__link--facebook img {
     width: 18px; }
-
-@media (max-width: 768px) {
-  .m-home-logo__logo-wrap {
-    width: 100%;
-    height: auto;
-    position: relative;
-    float: left;
-    margin: 0;
-    padding: 20px 0 0 0; }
-  .m-home-logo__logo {
-    width: 70%;
-    max-width: 374px;
-    height: auto;
-    position: relative;
-    z-index: 1000;
-    margin: 0 5% 0 25%;
-    transition: margin 0.5s ease-in-out; }
-  .m-home-logo__astronaut-wrap {
-    width: 100%;
-    height: auto;
-    position: relative;
-    float: left;
-    padding: 40px 0 0 0;
-    z-index: 500; }
-  .m-home-logo__astronaut {
-    width: 40%;
-    height: auto;
-    margin: 0 -20px 0 0;
-    float: right;
-    position: relative;
-    z-index: 500;
-    opacity: 20;
-    transition: margin 0.5s ease-in-out; }
-  .m-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(21, 34, 46, 0.3);
-    background-blend-mode: multiply;
-    z-index: 900; }
-  .m-moon {
-    width: 100%;
-    opacity: 100;
-    z-index: 800;
-    transition: opacity 0.5s ease-in-out; }
-    .m-moon__wrap {
-      height: 20%;
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      overflow: hidden; }
-    .m-moon__img {
-      height: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: inherit; }
-  .m-social {
-    width: 60px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(21, 34, 46, 0.5);
-    z-index: 2000; }
-    .m-social__list {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: left; }
-    .m-social__item {
-      display: inline-block;
-      padding: 24px 14px 0 14px; }
-    .m-social__link--behance img {
-      width: 100%; }
-    .m-social__link--linkedin img {
-      width: 26px; }
-    .m-social__link--instagram img {
-      width: 28px; }
-    .m-social__link--twitter img {
-      width: 100%; }
-    .m-social__link--facebook img {
-      width: 18px; } }
 
 .svg-triangle path {
   width: 30px;

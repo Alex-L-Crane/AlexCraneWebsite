@@ -2,93 +2,78 @@
 //    #Hero Image
 //------------------------------------
 
-/*.m-home-logo {
-    width: auto;
-    height: auto;
-    position: relative;
-    margin: 160px 0 0 0;
-    z-index: 1000;
-    text-align: center;
-    transition: margin 0.5s ease-in-out;
+.m-home-logo {
     @include e(logo-wrap) {
-        width: auto;
-        float: left;
-    }
-    @include e(logo) {
-        width: 374px;
+        width: 70%;
         height: auto;
         position: relative;
+        margin: 0 5% 0 25%;
+        padding: 20px 0 0 0;
+    }
+    @include e(logo) {
+        width: 100%;
+        max-width: 374px;
+        height: auto;
+        display: block;
+        position: relative;
+        margin: 0 auto;
         z-index: 1000;
-        margin: 0 200px 0 0;
         transition: margin 0.5s ease-in-out;
     }
-    @include e(astronaut-wrap) {
-        width: auto;
-        float: right;
-        margin: 0 -20px 0 0;
-        padding-top: 18px;
+}
+
+.m-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba( $dark-gray, 0.6);
+    background-blend-mode: multiply;
+    z-index: 900;
+}
+
+.m-astronaut {
+    @include e(wrap) {
+        width: 50%;
+        height: auto;
+        position: absolute;
+        top: 45%;
+        right: -20px;
+        padding: 40px 0 0 0;
+        z-index: 500;
     }
     @include e(astronaut) {
-        width: 170px;
+        width: 100%;
         height: auto;
+        margin: 0;
         position: relative;
         z-index: 500;
         transition: margin 0.5s ease-in-out;
     }
 }
 
-.m-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba( $dark-gray, 0.4);
-    background-blend-mode: multiply;
-    z-index: 900;
-}
-
-@media (max-width: $breakpoint-tablet-large) {
-    .m-home-logo {
-        @include e(logo-wrap) {
-            width: 100%;
-        }
-        @include e(logo) {
-            margin: 0 auto;
-        }
-        @include e(astronaut-wrap) {
-
-        }
-        @include e(astronaut) {
-
-        }
-    }
-}
-
 .m-moon {
     width: 100%;
-    opacity: 100;
     z-index: 800;
-    transition: opacity 0.5s ease-in-out;
     @include e(wrap) {
-        height: 34%;
-        position: fixed;
+        height: 20%;
+        position: absolute;
         left: 0;
         bottom: 0;
         overflow: hidden;
     }
     @include e(img) {
+        width: 100%;
         height: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
         z-index: inherit;
     }
-}*/
+}
 
 .m-hero-bg {
     @include e(wrap) {
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
@@ -121,8 +106,8 @@
 
 .m-social {
     width: 60px;
-    position: fixed;
-    top: 160px;
+    position: absolute;
+    top: 0;
     bottom: 0;
     left: 0;
     background-color: rgba($dark-gray, 0.5);
@@ -134,6 +119,7 @@
         text-align: left;
     }
     @include e(item) {
+        display: inline-block;
         padding: 24px 14px 0 14px;
 
     }
@@ -174,130 +160,6 @@
     }
 }
 
-@media (max-width: $breakpoint-tablet) {
-    .m-home-logo {
-        @include e(logo-wrap) {
-            width: 100%;
-            height: auto;
-            position: relative;
-            float: left;
-            margin: 0;
-            padding: 20px 0 0 0;
-        }
-        @include e(logo) {
-            width: 70%;
-            max-width: 374px;
-            height: auto;
-            position: relative;
-            z-index: 1000;
-            margin: 0 5% 0 25%;
-            transition: margin 0.5s ease-in-out;
-        }
-        @include e(astronaut-wrap) {
-            width: 100%;
-            height: auto;
-            position: relative;
-            float: left;
-            padding: 40px 0 0 0;
-            z-index: 500;
-        }
-        @include e(astronaut) {
-            width: 40%;
-            height: auto;
-            margin: 0 -20px 0 0;
-            float: right;
-            position: relative;
-            z-index: 500;
-            opacity: 20;
-            transition: margin 0.5s ease-in-out;
-        }
-    }
+@media (min-width: $breakpoint-tablet) {
 
-    .m-overlay {
-        position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        background-color: rgba( $dark-gray, 0.3);
-        background-blend-mode: multiply;
-        z-index: 900;
-    }
-
-    .m-moon {
-        width: 100%;
-        opacity: 100;
-        z-index: 800;
-        transition: opacity 0.5s ease-in-out;
-        @include e(wrap) {
-            height: 20%;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            overflow: hidden;
-        }
-        @include e(img) {
-            height: auto;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: inherit;
-        }
-    }
-
-    .m-social {
-        width: 60px;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba($dark-gray, 0.5);
-        z-index: 2000;
-        @include e(list) {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: left;
-        }
-        @include e(item) {
-            display: inline-block;
-            padding: 24px 14px 0 14px;
-
-        }
-        @include e(link) {
-            @include m(behance) {
-                & img {
-                    width: 100%;
-                }
-            }
-        }
-        @include e(link) {
-            @include m(linkedin) {
-                & img {
-                    width: 26px;
-                }
-            }
-        }
-        @include e(link) {
-            @include m(instagram) {
-                & img {
-                    width: 28px;
-                }
-            }
-        }
-        @include e(link) {
-            @include m(twitter) {
-                & img {
-                    width: 100%;
-                }
-            }
-        }
-        @include e(link) {
-            @include m(facebook) {
-                & img {
-                    width: 18px;
-                }
-            }
-        }
-    }
 }

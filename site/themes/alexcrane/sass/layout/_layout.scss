@@ -17,12 +17,6 @@
 	overflow-x:hidden;
 }
 
-@media (max-width: $breakpoint-tablet-large) {
-	.l-hero-wrap {
-		height: auto;
-	}
-}
-
 .l-content{
 	position: relative;
 	@include size1of1();
