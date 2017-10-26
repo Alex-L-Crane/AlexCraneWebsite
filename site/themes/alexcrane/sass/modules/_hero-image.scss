@@ -2,186 +2,302 @@
 //    #Hero Image
 //------------------------------------
 
-
-.m-home-logo {
-  @include e(wrap) {
-    width: 35%;
+/*.m-home-logo {
+    width: auto;
     height: auto;
-    position: fixed;
-    top: 20%;
-    right: 20%;
-    margin-top: 0;
-      margin-right: 0;
-      margin-bottom: 0;
-      margin-left: 0;
-    z-index: 500;
-    text-align: center;
-      transition: right 0.5s ease-in-out, margin-right 0.5s ease-in-out;
-  }
-  @include e(logo) {
-    height: 360px;
-    margin: 0 auto;
-  }
-  @include e(astronaut) {
-    height: 360px;
-    position: fixed;
-    top: 20%;
-    right: -20px;
-    margin: 0;
-    z-index: 500;
-    padding-top: 18px;
-  }
-}
-
-.m-moon {
-  width: 100%;
-    opacity: 100%;
-    transition: opacity 0.5s ease-in-out;
-  @include e(wrap) {
-    height: 34%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    position: relative;
+    margin: 160px 0 0 0;
     z-index: 1000;
-    overflow: hidden;
-  }
-  @include e(img) {
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+    text-align: center;
+    transition: margin 0.5s ease-in-out;
+    @include e(logo-wrap) {
+        width: auto;
+        float: left;
+    }
+    @include e(logo) {
+        width: 374px;
+        height: auto;
+        position: relative;
+        z-index: 1000;
+        margin: 0 200px 0 0;
+        transition: margin 0.5s ease-in-out;
+    }
+    @include e(astronaut-wrap) {
+        width: auto;
+        float: right;
+        margin: 0 -20px 0 0;
+        padding-top: 18px;
+    }
+    @include e(astronaut) {
+        width: 170px;
+        height: auto;
+        position: relative;
+        z-index: 500;
+        transition: margin 0.5s ease-in-out;
+    }
 }
 
-.m-hero-bg {
-  @include e(wrap) {
+.m-overlay {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 0;
-  }
-  @include e(layer) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    background: transparent;
-    @include m(z100) {
-      z-index: 100;
-    }
-    @include m(z200) {
-      z-index: 200;
-    }
-    @include m(z300) {
-      z-index: 300;
-    }
-  }
-}
-
-.m-social {
-  width: 60px;
-  height: 80%;
-  position: fixed;
-    left: 0;
-    bottom: 0;
-  background-color: rgba($base-red, 0.5);
-  z-index: 2000;
-  @include e(list) {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-  }
-  @include e(item) {
-    padding: 24px 14px 0 14px;
-
-  }
-  @include e(link) {
-    @include m(behance) {
-      & img {
-        width: 100%;
-      }
-    }
-  }
-  @include e(link) {
-    @include m(linkedin) {
-      & img {
-        width: 26px;
-      }
-    }
-  }
-  @include e(link) {
-    @include m(instagram) {
-      & img {
-        width: 28px;
-      }
-    }
-  }
-  @include e(link) {
-    @include m(twitter) {
-      & img {
-          width: 100%;
-      }
-    }
-  }
-  @include e(link) {
-    @include m(facebook) {
-      & img {
-        width: 18px;
-      }
-    }
-  }
+    background-color: rgba( $dark-gray, 0.4);
+    background-blend-mode: multiply;
+    z-index: 900;
 }
 
 @media (max-width: $breakpoint-tablet-large) {
-  .m-home-logo {
+    .m-home-logo {
+        @include e(logo-wrap) {
+            width: 100%;
+        }
+        @include e(logo) {
+            margin: 0 auto;
+        }
+        @include e(astronaut-wrap) {
+
+        }
+        @include e(astronaut) {
+
+        }
+    }
+}
+
+.m-moon {
+    width: 100%;
+    opacity: 100;
+    z-index: 800;
+    transition: opacity 0.5s ease-in-out;
     @include e(wrap) {
-        width: 80%;
-      max-width: 375px;
-      height: auto;
-      position: fixed;
-      right: 50%;
-      margin-right: -20%;
+        height: 34%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
     }
-    @include e(logo) {
+    @include e(img) {
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: inherit;
     }
-    @include e(astronaut) {
+}*/
+
+.m-hero-bg {
+    @include e(wrap) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
     }
-  }
+    @include e(layer) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: transparent;
+        border: none;
+        @include m(z100) {
+            z-index: 100;
+        }
+        @include m(z200) {
+            z-index: 200;
+        }
+        @include m(z300) {
+            z-index: 300;
+        }
+    }
+}
+
+.m-social {
+    width: 60px;
+    position: fixed;
+    top: 160px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($dark-gray, 0.5);
+    z-index: 2000;
+    @include e(list) {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+    @include e(item) {
+        padding: 24px 14px 0 14px;
+
+    }
+    @include e(link) {
+        @include m(behance) {
+            & img {
+                width: 100%;
+            }
+        }
+    }
+    @include e(link) {
+        @include m(linkedin) {
+            & img {
+                width: 26px;
+            }
+        }
+    }
+    @include e(link) {
+        @include m(instagram) {
+            & img {
+                width: 28px;
+            }
+        }
+    }
+    @include e(link) {
+        @include m(twitter) {
+            & img {
+                width: 100%;
+            }
+        }
+    }
+    @include e(link) {
+        @include m(facebook) {
+            & img {
+                width: 18px;
+            }
+        }
+    }
 }
 
 @media (max-width: $breakpoint-tablet) {
     .m-home-logo {
-        @include e(wrap) {
-            width: auto;
+        @include e(logo-wrap) {
+            width: 100%;
             height: auto;
-            top: 0;
-            right: 0;
-            float: right;
-            margin-top:20px;
-            margin-right: 0;
-            margin-bottom: 0;
-            margin-left: 0;
+            position: relative;
+            float: left;
+            margin: 0;
+            padding: 20px 0 0 0;
         }
         @include e(logo) {
-            height: 240px;
-            margin: 0;
+            width: 70%;
+            max-width: 374px;
+            height: auto;
+            position: relative;
+            z-index: 1000;
+            margin: 0 5% 0 25%;
+            transition: margin 0.5s ease-in-out;
+        }
+        @include e(astronaut-wrap) {
+            width: 100%;
+            height: auto;
+            position: relative;
+            float: left;
+            padding: 40px 0 0 0;
+            z-index: 500;
         }
         @include e(astronaut) {
-            top: 260px;
+            width: 40%;
+            height: auto;
+            margin: 0 -20px 0 0;
+            float: right;
+            position: relative;
+            z-index: 500;
+            opacity: 20;
+            transition: margin 0.5s ease-in-out;
         }
     }
-    .m-moon {
-        opacity: 0;
+
+    .m-overlay {
+        position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        background-color: rgba( $dark-gray, 0.3);
+        background-blend-mode: multiply;
+        z-index: 900;
     }
+
+    .m-moon {
+        width: 100%;
+        opacity: 100;
+        z-index: 800;
+        transition: opacity 0.5s ease-in-out;
+        @include e(wrap) {
+            height: 20%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+        @include e(img) {
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: inherit;
+        }
+    }
+
     .m-social {
-        height: 100%;
+        width: 60px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($dark-gray, 0.5);
+        z-index: 2000;
+        @include e(list) {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+        @include e(item) {
+            display: inline-block;
+            padding: 24px 14px 0 14px;
+
+        }
+        @include e(link) {
+            @include m(behance) {
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+        @include e(link) {
+            @include m(linkedin) {
+                & img {
+                    width: 26px;
+                }
+            }
+        }
+        @include e(link) {
+            @include m(instagram) {
+                & img {
+                    width: 28px;
+                }
+            }
+        }
+        @include e(link) {
+            @include m(twitter) {
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+        @include e(link) {
+            @include m(facebook) {
+                & img {
+                    width: 18px;
+                }
+            }
+        }
     }
 }

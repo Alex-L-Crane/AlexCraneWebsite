@@ -4,13 +4,23 @@
 
 .l-page-wrap {
 	position: relative;
+	overflow-y:hidden;
+	overflow-x:hidden;
+	height: 100%;
 }
 
 .l-hero-wrap {
-	@include size1of1();	
-	position:relative;
-	height:100vh;
-	overflow: hidden;
+	@include size1of1();
+	position: relative;
+	height: 100vh;
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+
+@media (max-width: $breakpoint-tablet-large) {
+	.l-hero-wrap {
+		height: auto;
+	}
 }
 
 .l-content{
