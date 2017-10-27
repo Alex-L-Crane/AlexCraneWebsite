@@ -115,22 +115,32 @@ var app = new Vue({
      }
  });
 
-/*$(function() {
-    // init controller
-    var controller = new ScrollMagic.Controller();*/
+    (function($) {
 
-    /*var tween = TweenMax.to('#pin-this', 0.5, {
-        opacity: 0
-    });*/
+        var astronaut = $('.m-astronaut__wrap'),
+            logo = $('.m-home-logo__logo'),
+            connection = $('.m-astronaut__connection'),
+            moon = $('.m-moon__wrap'),
+            social = $('.m-social'),
+            tlLoad = new TimelineLite(),
+            tlAstronaut = new TimelineMax({repeat: -1});
 
-    // create a scene
-   /* new ScrollMagic.Scene({
-        triggerElement: '#trigger-element',
-        offset: -100
-    })
-        .setTween('#pin-this', 0.5, {
-            opacity: 0
-        })
-        .addIndicators({name: "something"})
-        .addTo(controller); // assign the scene to the controller
-});*/
+        tlLoad
+
+            .to( astronaut, 1.5, {right: -20, ease: Sine.easeInOut})
+            .to( logo, 2, {autoAlpha: 1}, "-=.5")
+            .to( connection, 1.5, {width: '40%', ease: Bounce.easeOut}, 2)
+            .to( moon, 2.5, {bottom: 0, ease: Expo.easeOut}, 2)
+            .to( social, 2, {left: 0, ease: Expo.easeOut}, 2.4);
+
+        tlAstronaut
+            .fromTo(astronaut, 5, {rotation: "0", y: 0, x:0, ease: Sine.easeInOut}, {rotation: "+=5", y: -10, x: -5, ease: Sine.easeInOut})
+            .fromTo(astronaut, 5, {rotation: "+=5", y: -10, x: -5, ease: Sine.easeInOut}, {rotation: "0", y: 0, x: -10, ease: Sine.easeInOut})
+            .fromTo(astronaut, 5, {rotation: "-=5", y: 0, x: -10 , ease: Sine.easeInOut}, {rotation: "-=5", y: -5, x: 5, ease: Sine.easeInOut})
+            .fromTo(astronaut, 5, {rotation: "-=5", y: -5, x: 5, ease: Sine.easeInOut}, {rotation: "0", y: 0, x:0, ease: Sine.easeInOut})
+            .fromTo(astronaut, 5, {rotation: "0", y: 0, x:0, ease: Sine.easeInOut}, {rotation: "+=5", y: -10, x: 20, ease: Sine.easeInOut})
+            .fromTo(astronaut, 5, {rotation: "+=5", y: -10, x: 20, ease: Sine.easeInOut}, {rotation: "0", y: 0, x: 40, ease: Sine.easeInOut})
+            .fromTo(astronaut, 5, {rotation: "-=5", y: 0, x: 40 , ease: Sine.easeInOut}, {rotation: "-=5", y: -5, x: 20, ease: Sine.easeInOut})
+            .fromTo(astronaut, 5, {rotation: "-=5", y: -5, x: 20, ease: Sine.easeInOut}, {rotation: "0", y: 0, x: 0, ease: Sine.easeInOut});;
+
+    })(jQuery);
